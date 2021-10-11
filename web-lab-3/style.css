@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    background: rgb(255,168,241);
+    background: linear-gradient(90deg, rgba(255,168,241,1) 0%, rgba(184,243,255,1) 100%);
+}
+
+.header {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#work {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 60vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 50px);
+}
+
+.calculator-buttons {
+
+    display: grid;    
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+    border: none;
+
+}
+
+.calculator-buttons > button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rbga(255, 255, 255, .1);
+}
+  
+.calculator-buttons > button:hover {
+    background-color: rgb(235, 164, 223);
+    transition-timing-function: ease-in;
+    transition: 0.5s;
+}
+
+#full-span {
+    grid-column: span 4;
+}
+
+.result {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output {
+    background: none;
+    color: rgba(255,255, 255, 0.75);
+    font-size: 2rem;
+    border: 0;
+    margin: 0 10px;
+    text-align: right;
+    width: 100%;
+    height: 100px;
+}
